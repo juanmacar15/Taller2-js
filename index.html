@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form">
+        <div class="form-content">
+            <h1>numeros positivos y negativos </h1>
+            <h3>Ingrese el numero:</h3>
+            <form id="formulario" class="formulario">
+                <input name="num" id="num" type="text" pattern="^[(-9)-9]+" title="Solo numeros" placeholder="ingrese un numero" autocomplete="off" class="input-number">
+                <h3 id="res"></h3>
+                <button type="submit" id="btn" class="btn">confirmar</button>
+            </form>
+            
+        </div>
+    </div> 
+</body>
+<script src="main.js"></script>
+</html>
