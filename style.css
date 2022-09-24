@@ -27,15 +27,22 @@
     text-align: center;
 }
 
-.input-number, .btn{
+.input-number{
     height: 40px;
     padding: 0 10px;
     outline: none;
     border: 0;
     border-radius: 10px;
+    display: flex;
+    margin: 5px auto;
 }
 
 .btn{
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
     background-color: coral;
     box-shadow: 0 0 10px rgb(196, 63, 15);
 }
