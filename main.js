@@ -4,17 +4,18 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
         validar();
         function validar(){
-            let temp = document.getElementById("num1").value;
-            let pre = document.getElementById("num2").value;
+            let pago = document.getElementById("num1").value;
 
-            if((temp > 100) || (pre > 200)){
-                document.getElementById("res1").style.color = "red";
-                document.getElementById('res1').innerHTML = 'ALERTAAA';
+            if(pago > 130000){
+                let desc = pago * 0.15;
+                let total = pago - desc;
+                document.getElementById("res1").innerHTML = 'descuento del 15%';
+                document.getElementById('res2').innerHTML = 'paga '+ total+' pesos';
 
             }
             else{
-                document.getElementById("res1").style.color = "blue";
-                document.getElementById('res1').innerHTML = 'NORMAL';
+                document.getElementById("res1").innerHTML = 'sin descuento';
+                document.getElementById('res2').innerHTML ='paga '+pago+' pesos';
             }
 
         }
