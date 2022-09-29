@@ -4,50 +4,25 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
         validar();
         function validar(){
-            let n1 = document.getElementById("num1").value;
-            let n2= document.getElementById("num2").value;
-            let n3 = document.getElementById("num3").value;
+            let letra = document.getElementById("num1").value;
 
-            if((n1 > n2) && (n1 > n3) && (n2 > n3)){
-                document.getElementById('res1').innerHTML = n1 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n3 + ' es el menor';
+            if(letra =="t"){
+                let b = parseInt(prompt("ingrese la base:"));
+                let h = parseInt(prompt("ingrese la altura:"));
+                let at = b*h/2;
+                document.getElementById('res1').innerHTML = 'el area es: ' + at;
+
             }
-            else if((n1 > n2) && (n1 > n3) && (n3 > n2)){
-                document.getElementById('res1').innerHTML = n1 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n2 + ' es el menor';
-            }
-            else if((n2 > n1) && (n2 > n3) && (n3 > n1)){
-                document.getElementById('res1').innerHTML = n2 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n1 + ' es el menor';
-            }
-            else if((n2 > n1) && (n2 > n3) && (n1 > n3)){
-                document.getElementById('res1').innerHTML = n2 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n3 + ' es el menor';
-            }
-            else if((n3 > n1) && (n3 > n2) && (n1 > n2)){
-                document.getElementById('res1').innerHTML = n3 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n2 + ' es el menor';
-            }
-            else if((n3 > n1) && (n3 > n2) && (n2 > n1)){
-                document.getElementById('res1').innerHTML = n3 + ' es el mayor';
-                document.getElementById('res2').innerHTML = n1 + ' es el menor';
+            else if(letra =="c"){
+                let r = parseInt(prompt("ingrese el radio:"));
+                const pi =3.1416;
+                let ac = pi*r*r;
+                document.getElementById('res1').innerHTML = 'el area es: ' + ac;
             }
             else{
-                document.getElementById('res1').innerHTML = ' hay numeros iguales';
+                document.getElementById('res1').innerHTML = 'la letra ingresada no es valida';
             }
-            
+
         }
     })
-
-    for (let input of document.querySelectorAll("input")) {
-        document.querySelector(`[name='${input.name}']`).addEventListener('input', (e) => {
-            if (!new RegExp(e.target.pattern).test(e.target.value))
-                e.target.setCustomValidity(e.target.title);
-            else
-                e.target.setCustomValidity("");
-        })
-    }
-
-
-
 })
