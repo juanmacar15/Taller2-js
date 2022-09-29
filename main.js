@@ -4,16 +4,17 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
         validar();
         function validar(){
-            let l1 = document.getElementById("num1").value;
-            let l2 = document.getElementById("num2").value;
+            let temp = document.getElementById("num1").value;
+            let pre = document.getElementById("num2").value;
 
-            if((l1 > 0) && (l2 > 0)){
-                let area = l1 * l2;
-                document.getElementById('res1').innerHTML = 'el area es: ' + area;
+            if((temp > 100) || (pre > 200)){
+                document.getElementById("res1").style.color = "red";
+                document.getElementById('res1').innerHTML = 'ALERTAAA';
 
             }
             else{
-                document.getElementById('res1').innerHTML = 'los lados deben ser positivos :)';
+                document.getElementById("res1").style.color = "blue";
+                document.getElementById('res1').innerHTML = 'NORMAL';
             }
 
         }
