@@ -4,18 +4,20 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
         validar();
         function validar(){
-            let pago = document.getElementById("num1").value;
+            let tra = document.getElementById("num1").value;
+            let h = document.getElementById("num2").value;
 
-            if(pago > 130000){
-                let desc = pago * 0.15;
-                let total = pago - desc;
-                document.getElementById("res1").innerHTML = 'descuento del 15%';
-                document.getElementById('res2').innerHTML = 'paga '+ total+' pesos';
+            if( tra == "p" || tra == "P"){
+                let form = h * 20000;
+                document.getElementById("res1").innerHTML = 'su pago es de '+form + ' pesos';
 
             }
+            else if(tra == "a" || tra == "A"){
+                let form = h * 10000;
+                document.getElementById("res1").innerHTML = 'su pago es de '+form + ' pesos';
+            }
             else{
-                document.getElementById("res1").innerHTML = 'sin descuento';
-                document.getElementById('res2').innerHTML ='paga '+pago+' pesos';
+                document.getElementById("res1").innerHTML = 'la letra ingresada no es correcta';
             }
 
         }
