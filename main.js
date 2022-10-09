@@ -4,24 +4,27 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
         validar();
         function validar(){
-            let a = document.getElementById("num1").value;
-            let b = document.getElementById("num2").value;
-            let c = document.getElementById("num2").value;
-            let d = document.getElementById("num2").value;
 
-            let a1 = a%2;
-            let b1 = b%2;
-            let c1 = c%2;
-            let d1 = d%2;
+            let pro1 = parseInt(prompt("ingrese el valor del 1er producto:"));
+            let pro2 = parseInt(prompt("ingrese el valor del 2do producto:"));
+            let pro3 = parseInt(prompt("ingrese el valor del 3ro producto:"));
+            let pro4 = parseInt(prompt("ingrese el valor del 4to producto:"));
+            let pro5 = parseInt(prompt("ingrese el valor del 5to producto:"));
+            
 
-            if((a1 == 0) && (b1 == 0) && (c1 == 0) && (d1 == 0)){
-                let suma = a + b + c + d;
-                document.getElementById("res1").innerHTML = 'la suma es: '+suma;
+            if((pro1 > 0) && (pro2 > 0) && (pro3 > 0) && (pro4 > 0) && (pro5 > 0)){
+                let iva1 = 0.19;
+                let st = pro1 + pro2 + pro3 + pro4 + pro5;
+                let iva2 = st * iva1;
+                let tp = st + iva2;
 
+                document.getElementById("res1").innerHTML = 'subtotal ' + st + ' pesos';
+                document.getElementById("res2").innerHTML = 'total a pagar '+tp + ' pesos';
+                
+                
             }
             else{
-                let mult = a * b * c * d;
-                document.getElementById("res2").innerHTML = 'la multiplicacion es : '+mult;
+                document.getElementById("res1").innerHTML = 'el valor de todos los productos debe ser mayor a 0';
             }
 
         }
