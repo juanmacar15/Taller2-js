@@ -5,28 +5,16 @@ addEventListener("DOMContentLoaded", (e) => {
         validar();
         function validar(){
 
-            let pro1 = parseInt(prompt("ingrese el valor del 1er producto:"));
-            let pro2 = parseInt(prompt("ingrese el valor del 2do producto:"));
-            let pro3 = parseInt(prompt("ingrese el valor del 3ro producto:"));
-            let pro4 = parseInt(prompt("ingrese el valor del 4to producto:"));
-            let pro5 = parseInt(prompt("ingrese el valor del 5to producto:"));
+            let n1 = document.getElementById("num1").value;
+            let n2 = document.getElementById("num2").value;
+            let n3 = document.getElementById("num3").value;
+            let n4 = document.getElementById("num4").value;
+            let n5 = document.getElementById("num5").value;
             
 
-            if((pro1 > 0) && (pro2 > 0) && (pro3 > 0) && (pro4 > 0) && (pro5 > 0)){
-                let iva1 = 0.19;
-                let st = pro1 + pro2 + pro3 + pro4 + pro5;
-                let iva2 = st * iva1;
-                let tp = st + iva2;
+            let prom = (parseInt(n1)+parseInt(n2)+parseInt(n3)+parseInt(n4)+parseInt(n5))/5;
 
-                document.getElementById("res1").innerHTML = 'subtotal ' + st + ' pesos';
-                document.getElementById("res2").innerHTML = 'total a pagar '+tp + ' pesos';
-                
-                
-            }
-            else{
-                document.getElementById("res1").innerHTML = 'el valor de todos los productos debe ser mayor a 0';
-            }
-
+            document.getElementById("res1").innerHTML = 'el promedio de los 5 estudiantes es : '+ prom;
         }
     })
 })
