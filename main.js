@@ -5,9 +5,31 @@ addEventListener("DOMContentLoaded", (e) => {
         validar();
         function validar(){
 
-            let n1 = document.getElementById("num1").value;
-            let n2 = document.getElementById("num2").value;
+            let letra = document.getElementById("num1").value;
             
+            if(letra == "a" || letra == "A"){
+                let precio = parseInt(prompt('ingrese el precio del producto'));
+                let des = precio * 0.10;
+                let ptotal = precio - des;
+                document.getElementById("res1").innerHTML = 'total: $'+ ptotal + ' pesos';
+            }
+            else if(letra == "b" || letra == "B"){
+                let precio = parseInt(prompt('ingrese el precio del producto'));
+                let des = precio * 0.15;
+                let ptotal = precio - des;
+                document.getElementById("res1").innerHTML = 'total: $'+ ptotal + ' pesos';
+            }
+            else if(letra == "c" || letra == "C"){
+                let precio = parseInt(prompt('ingrese el precio del producto'));
+                let des = precio * 0.20;
+                let ptotal = precio - des;
+                document.getElementById("res1").innerHTML = 'total: $'+ ptotal + ' pesos';
+            }
+            else{
+                document.getElementById("res1").innerHTML = 'la letra que ingresas no es valida';
+            }
+
+            /*
             if(n1 >= n2){
                 let resta = parseInt(n1)-parseInt(n2);
                 document.getElementById("res1").innerHTML = 'la resta es: '+ resta;
@@ -15,7 +37,7 @@ addEventListener("DOMContentLoaded", (e) => {
             else{
                 document.getElementById("res1").innerHTML = 'el primer numero debe ser mayor que el segundo :v';
             }
-
+            */
             
         }
     })
